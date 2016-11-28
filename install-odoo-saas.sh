@@ -10,7 +10,7 @@
  export INIT_BACKUPS=${INIT_BACKUPS:-"no"} # yes | no | docker-host
  export INIT_NGINX=${INIT_NGINX:-"no"} # yes | no | docker-host
  export INIT_START_SCRIPTS=${INIT_START_SCRIPTS:-"no"} # yes | no | docker-host
- export INIT_SAAS_TOOLS=${INIT_SAAS_TOOLS:-"no"} # no | list of parameters to saas.py script
+# export INIT_SAAS_TOOLS=${INIT_SAAS_TOOLS:-"no"} # no | list of parameters to saas.py script
  export INIT_ODOO_CONFIG=${INIT_ODOO_CONFIG:-"no"} # no | yes | docker-container
  export INIT_USER=${INIT_USER:-"no"}
  export INIT_DIRS=${INIT_DIRS:-"no"}
@@ -293,7 +293,7 @@
      REPOS=( "${REPOS[@]}" "https://github.com/it-projects-llc/website-addons.git it-projects-llc/website-addons")
      REPOS=( "${REPOS[@]}" "https://github.com/it-projects-llc/misc-addons.git it-projects-llc/misc-addons")
      REPOS=( "${REPOS[@]}" "https://github.com/it-projects-llc/mail-addons.git it-projects-llc/mail-addons")
-     REPOS=( "${REPOS[@]}" "https://github.com/it-projects-llc/odoo-saas-tools.git it-projects-llc/odoo-saas-tools")
+    # REPOS=( "${REPOS[@]}" "https://github.com/it-projects-llc/odoo-saas-tools.git it-projects-llc/odoo-saas-tools")
  fi
 
  if [[ "${REPOS}" != "" ]]
@@ -409,10 +409,10 @@
  fi
 
  #### Odoo Saas Tool
- if [[ "$INIT_SAAS_TOOLS" != "no" ]]        ###################################### IF
- then
-     su --preserve-environment - ${ODOO_USER} -s /bin/bash -c  "python $ADDONS_DIR/it-projects-llc/odoo-saas-tools/saas.py $INIT_SAAS_TOOLS"
- fi
+ # if [[ "$INIT_SAAS_TOOLS" != "no" ]]        ###################################### IF
+ # then
+ #     su --preserve-environment - ${ODOO_USER} -s /bin/bash -c  "python $ADDONS_DIR/it-projects-llc/odoo-saas-tools/saas.py $INIT_SAAS_TOOLS"
+ # fi
 
  #### START CONTROL
  DAEMON_LIST=( "odoo" )
