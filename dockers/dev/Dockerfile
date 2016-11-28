@@ -1,5 +1,4 @@
-FROM itprojectsllc/install-odoo:latest
-
+FROM odoo
 VOLUME ["/mnt/odoo-source", \
        "/mnt/extra-addons", \
        "/mnt/data-dir", \
