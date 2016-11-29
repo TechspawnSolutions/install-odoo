@@ -1,5 +1,4 @@
-FROM itprojectsllc/install-odoo:latest
-
+FROM odoo
 # install module for all new databases
 ENV AUTOINSTALL_MODULES="['theme_kit']"
 RUN sed -i "s;\

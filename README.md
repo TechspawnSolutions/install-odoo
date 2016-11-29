@@ -9,7 +9,7 @@ with / without using [Amazon RDS](https://aws.amazon.com/rds/)
 
 ## Getting script
 
-    git clone https://github.com/it-projects-llc/install-odoo.git
+    git clone -b custom https://github.com/TechspawnSolutions/install-odoo.git
     cd install-odoo
     
 ## Running script
@@ -95,7 +95,7 @@ Simplest way to create odoo container is as following:
     -p 8072:8072 \
     --name odoo \
     --link db-odoo:db \
-    -t itprojectsllc/install-odoo
+    -t odoo
 
 Additionally, you can specify following environment variables:
 
